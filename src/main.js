@@ -10,6 +10,8 @@ import Services from "./components/Services";
 import Home from "./components/Home";
 import Query from "./components/Query";
 import MacroQuery from "./components/MacroQuery";
+import Information from "./components/Information";
+import BankQuery from "./components/BankQuery";
 
 Vue.use(Element, { size: 'small', zIndex: 3000 });
 Vue.use(ElementUI);
@@ -23,6 +25,8 @@ const router  = new VueRouter({
     {path:'/services', component: Services},
     {path:'/query', component:Query},
     {path:'/query/macro', component:MacroQuery},
+    {path:'/information', component:Information},
+    {path:'/query/bank', component:BankQuery},
   ],
   mode:"history"
 

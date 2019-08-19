@@ -20,7 +20,7 @@
             </el-col>
             <el-col :span="12">
                 <img src="" alt="" style="height: 400px; width: 400px;">
-                <h2>银行数据</h2>
+                <router-link to="/query/bank" tag="h2">银行数据</router-link>
                 <ul>
                     <li>解释或条目</li>
                     <li>解释或条目</li>

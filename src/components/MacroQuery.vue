@@ -43,8 +43,8 @@
             </el-col>
 
             <el-col :span="12">
-                <img src="" alt="" width="700px" height="300px" style="margin-top: 50px; background: chocolate"><br>
-                <img src="" alt="" width="700px" height="300px" style="background: chocolate">
+                <highcharts :options="chartOptions"></highcharts>
+                <highcharts :options="chartOptions1"></highcharts>
             </el-col>
         </el-row>
 
@@ -55,11 +55,13 @@
 <script>
     import Header from "./Header";
     import Footer from "./Footer";
+    import {Chart} from 'highcharts-vue'
     export default {
         name: "MacroQuery",
         components:{
             Header,
-            Footer
+            Footer,
+            highcharts: Chart
         },
         data(){
             return {
@@ -88,7 +90,25 @@
                     gongshang:'2.5600',
                     nongye:'2.5600'
                 },
-                ]
+                ],
+                chartOptions: {
+                    title: {
+                        text: 'sample title'
+                    },
+                    series: [{
+                        name:'sample',
+                        data: [95,23,654,210,5,1] // sample data
+                    }]
+                },
+                chartOptions1: {
+                    title: {
+                        text: 'sample title'
+                    },
+                    series: [{
+                        name:'sample',
+                        data: [12,58,6,5,8,20,4,15] // sample data
+                    }]
+                },
             }
         }
     }

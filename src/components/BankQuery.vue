@@ -34,8 +34,8 @@
             </el-col>
 
             <el-col :span="12">
-                <img src="" alt="" width="700px" height="300px" style="margin-top: 50px; background: chocolate"><br>
-                <img src="" alt="" width="700px" height="300px" style="background: chocolate">
+                <highcharts :options="chartOptions"></highcharts>
+                <highcharts :options="chartOptions1"></highcharts>
             </el-col>
         </el-row>
 
@@ -46,10 +46,12 @@
 <script>
     import Header from "./Header";
     import Footer from "./Footer";
+    import {Chart} from 'highcharts-vue'
     export default {
         name: "BankQuery",components:{
             Header,
-            Footer
+            Footer,
+            highcharts: Chart
         },
         data() {
             return {
@@ -78,7 +80,25 @@
                     gongshang:'2.5600',
                     nongye:'2.5600'
                 },
-                ]
+                ],
+                chartOptions: {
+                    title: {
+                        text: 'sample title'
+                    },
+                    series: [{
+                        name:'sample',
+                        data: [12,48,51,20,15,45,120,48,10,1] // sample data
+                    }]
+                },
+                chartOptions1: {
+                    title: {
+                        text: 'sample title'
+                    },
+                    series: [{
+                        name:'sample',
+                        data: [150,620,6,5,80,5,157,80,12] // sample data
+                    }]
+                },
             }
         },
     }

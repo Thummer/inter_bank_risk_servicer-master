@@ -6,6 +6,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import Element from 'element-ui';
 import axios from 'axios'
 import VueAxios from "vue-axios";
+import HighchartsVue from 'highcharts-vue'
 
 //引入路由页面
 import Services from "./components/Services";
@@ -20,6 +21,7 @@ Vue.use(Element, { size: 'small', zIndex: 3000 });
 Vue.use(ElementUI);
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
+Vue.use(HighchartsVue);
 Vue.config.productionTip = false
 
 //配置路由

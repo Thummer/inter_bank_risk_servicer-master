@@ -63,34 +63,19 @@
             Footer,
             highcharts: Chart
         },
+        methods:{
+            changeValue(){
+
+            },
+        },
         data(){
-            return {
-                tableData:[{
+            const item = {
                     date:'O/N',
                     gongshang:'2.5600',
                     nongye:'2.5600'
-                },{
-                    date:'1W',
-                    gongshang:'2.5600',
-                    nongye:'2.5600'
-                },{
-                    date:'2W',
-                    gongshang:'2.5600',
-                    nongye:'2.5600'
-                },{
-                    date:'1M',
-                    gongshang:'2.5600',
-                    nongye:'2.5600'
-                },{
-                    date:'3M',
-                    gongshang:'2.5600',
-                    nongye:'2.5600'
-                },{
-                    date:'6M',
-                    gongshang:'2.5600',
-                    nongye:'2.5600'
-                },
-                ],
+                };
+            return {
+                tableData: Array(10).fill(item),
                 chartOptions: {
                     title: {
                         text: 'sample title'

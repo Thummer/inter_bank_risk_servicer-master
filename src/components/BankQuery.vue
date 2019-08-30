@@ -48,7 +48,8 @@
     import Footer from "./Footer";
     import {Chart} from 'highcharts-vue'
     export default {
-        name: "BankQuery",components:{
+        name: "BankQuery",
+        components:{
             Header,
             Footer,
             highcharts: Chart

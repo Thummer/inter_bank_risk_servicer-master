@@ -16,6 +16,13 @@ import MacroQuery from "./components/MacroQuery";
 import Information from "./components/Information";
 import BankQuery from "./components/BankQuery";
 import Login from "./components/Login";
+import Guarantee from "./components/Guarantee";
+import Other from "./components/Other";
+import Loan from "./components/Loan";
+import ApplyGuarantee from "./components/ApplyGuarantee";
+import ApplyGuarantee1 from "./components/ApplyGuarantee1";
+import Qualification from "./components/Qualification";
+import Clause from "./components/Clause";
 
 Vue.use(Element, { size: 'small', zIndex: 3000 });
 Vue.use(ElementUI);
@@ -34,6 +41,13 @@ const router  = new VueRouter({
     {path:'/information', component:Information},
     {path:'/query/bank', component:BankQuery},
     {path:'/login', component:Login},
+    {path:'/services/guarantee', component:Guarantee},
+    {path:'/services/other', component:Other},
+    {path:'/services/loan', component:Loan},
+    {path:'/applyguarantee', component:ApplyGuarantee},
+    {path:'/applyguarantee1', component:ApplyGuarantee1},
+    {path:'/qualification', component:Qualification},
+    {path:'/clause', component:Clause},
   ],
   mode:"history"
 

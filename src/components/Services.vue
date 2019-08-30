@@ -12,18 +12,18 @@
 
         <el-row>
             <el-col :span="8">
-                <img src="" alt="" style="height: 300px; width: 300px; background: #70bee6">
-                <p>担保服务</p>
+                <img src="" alt="" style="height: 300px; width: 300px; background: #70bee6"><br>
+                <el-button type="success" @click="guarantee">担保服务</el-button>
             </el-col>
 
             <el-col :span="8">
-                <img src="" alt="" style="height: 300px; width: 300px; background: #70bee6">
-                <p>衍生品服务</p>
+                <img src="" alt="" style="height: 300px; width: 300px; background: #70bee6"><br>
+                <el-button type="success" @click="other">衍生品服务</el-button>
             </el-col>
 
             <el-col :span="8">
-                <img src="" alt="" style="height: 300px; width: 300px; background: #70bee6">
-                <p>银团信贷服务</p>
+                <img src="" alt="" style="height: 300px; width: 300px; background: #70bee6"><br>
+                <el-button type="success" @click="loan">银团信贷服务</el-button>
             </el-col>
 
         </el-row>
@@ -46,6 +46,17 @@
             return {
 
             }
+        },
+        methods:{
+            guarantee(){
+                this.$router.push({path: '/services/guarantee'})
+            },
+            other(){
+                this.$router.push({path: '/services/other'})
+            },
+            loan(){
+                this.$router.push({path: '/services/loan'})
+            },
         }
     }
 

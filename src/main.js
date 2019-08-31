@@ -23,6 +23,12 @@ import ApplyGuarantee from "./components/ApplyGuarantee";
 import ApplyGuarantee1 from "./components/ApplyGuarantee1";
 import Qualification from "./components/Qualification";
 import Clause from "./components/Clause";
+import BuyerSelect from "./components/BuyerSelect";
+import SellerSelect from "./components/SellerSelect";
+import OtherBuyer from "./components/OtherBuyer";
+import OtherSeller from "./components/OtherSeller";
+import OtherBuyerCDS from "./components/OtherBuyerCDS";
+import OtherSellerCDS from "./components/OtherSellerCDS";
 
 Vue.use(Element, { size: 'small', zIndex: 3000 });
 Vue.use(ElementUI);
@@ -48,6 +54,12 @@ const router  = new VueRouter({
     {path:'/applyguarantee1', component:ApplyGuarantee1},
     {path:'/qualification', component:Qualification},
     {path:'/clause', component:Clause},
+    {path:'/services/other/bselect', component:BuyerSelect},
+    {path:'/services/other/sselect', component:SellerSelect},
+    {path:'/services/other/otherbuyer', component:OtherBuyer},
+    {path:'/services/other/otherseller', component:OtherSeller},
+    {path:'/services/other/otherbuyerc', component:OtherBuyerCDS},
+    {path:'/services/other/othersellerc', component:OtherSellerCDS},
   ],
   mode:"history"
 

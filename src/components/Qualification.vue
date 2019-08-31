@@ -12,8 +12,8 @@
         <h1>担保人资格申请</h1>
 
         <el-row>
-            <el-col style="margin: 100px 250px" :span="16">
-                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" style="padding: 10px">
+            <el-col style="margin: 50px 250px" :span="16">
+                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" style="padding: 10px" >
                     <el-form-item label="担保人单位" prop="name">
                         <el-input v-model="ruleForm.name"></el-input>
                     </el-form-item>

@@ -27,8 +27,8 @@
 
                 定义搜索字段（比如站内搜索或谷歌搜索等）：</p>
             <span slot="footer" class="dialog-footer">
-    <el-button @click="cancel">取 消</el-button>
-    <el-button type="primary" @click="confirm">确 定</el-button>
+    <el-button @click="cancel">拒 绝</el-button>
+    <el-button type="primary" @click="confirm">同 意</el-button>
   </span>
         </el-dialog>
     </div>

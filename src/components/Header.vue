@@ -4,7 +4,7 @@
             <el-col :span="18">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" style="min-width: 700px" router="true">
 
-            <el-menu-item index="/" ><img src="../assets/logo.png" alt="sample" style="height: 30px; width: 30px"></el-menu-item>
+            <el-menu-item index="/" ><img src="../assets/52045684.jpg" alt="sample" style="height: 30px; width: 30px"></el-menu-item>
             <el-menu-item index="/">首页</el-menu-item>
             <el-submenu index="2">
                 <template slot="title">深度数据服务</template>
@@ -12,7 +12,7 @@
                 <el-menu-item index="/query">数据查询</el-menu-item>
                 <el-menu-item index="2-3">选项3</el-menu-item>
             </el-submenu>
-            <el-menu-item index="3">常见问题</el-menu-item>
+            <el-menu-item index="3">问题反馈</el-menu-item>
 
         </el-menu>
             </el-col>

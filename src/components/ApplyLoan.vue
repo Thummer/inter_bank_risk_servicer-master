@@ -11,56 +11,56 @@
         <h1>申请担保服务</h1>
         <el-row>
             <el-col style="margin: 50px 250px" :span="16">
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" style="padding: 10px">
-            <el-form-item label="申请单位" prop="name">
-                <el-input v-model="ruleForm.name"></el-input>
-            </el-form-item>
-            <el-form-item label="交易人代表" prop="deputy">
-                <el-input v-model="ruleForm.deputy"></el-input>
-            </el-form-item>
-            <el-form-item label="公司地址" prop="address">
-                <el-input v-model="ruleForm.address"></el-input>
-            </el-form-item>
-            <el-form-item label="借款额度" prop="amount">
-                <el-input v-model="ruleForm.amount" type="number"></el-input>
-            </el-form-item>
-            <el-form-item label="借款期限" required>
-                <el-col :span="11" >
-                    <el-form-item prop="date1">
-                        <el-date-picker type="date" placeholder="选择起始日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
+                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" style="padding: 10px">
+                    <el-form-item label="申请单位" prop="name">
+                        <el-input v-model="ruleForm.name"></el-input>
                     </el-form-item>
-                </el-col>
-                <el-col class="line" :span="2">-</el-col>
-                <el-col :span="11">
-                    <el-form-item prop="date2">
-                        <el-date-picker type="date" placeholder="选择结束日期" v-model="ruleForm.date2" style="width: 100%;"></el-date-picker>
+                    <el-form-item label="交易人代表" prop="deputy">
+                        <el-input v-model="ruleForm.deputy"></el-input>
                     </el-form-item>
-                </el-col>
-            </el-form-item>
-            <el-form-item label="借款利率" prop="interests">
-                <el-input v-model="ruleForm.interests"  type="number" min="0" step="0.001"></el-input>
-            </el-form-item>
-            <el-form-item label="贷款直接用途" prop="usage">
-                <el-input type="textarea" v-model="ruleForm.usage"></el-input>
-            </el-form-item>
-            <el-form-item label="担保价格" prop="guaranteeprice">
-                <el-input v-model="ruleForm.guaranteeprice"  type="number" min="0"></el-input>
-            </el-form-item>
-            <el-form-item label="贷款直接用途" prop="usage">
-                <el-input type="textarea" v-model="ruleForm.usage"></el-input>
-            </el-form-item>
-            <el-form-item label="反担保措施" prop="antiguarantee">
-                <el-input type="textarea" v-model="ruleForm.antiguarantee"></el-input>
-            </el-form-item>
-            <el-form-item label="还款计划" prop="plan">
-            <el-input type="textarea" v-model="ruleForm.plan"></el-input>
-            </el-form-item>
+                    <el-form-item label="公司地址" prop="address">
+                        <el-input v-model="ruleForm.address"></el-input>
+                    </el-form-item>
+                    <el-form-item label="借款额度" prop="amount">
+                        <el-input v-model="ruleForm.amount" type="number"></el-input>
+                    </el-form-item>
+                    <el-form-item label="借款期限" required>
+                        <el-col :span="11">
+                            <el-form-item prop="date1">
+                                <el-date-picker type="date" placeholder="选择起始日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
+                            </el-form-item>
+                        </el-col>
+                        <el-col class="line" :span="2">-</el-col>
+                        <el-col :span="11">
+                            <el-form-item prop="date2">
+                                <el-date-picker type="date" placeholder="选择结束日期" v-model="ruleForm.date2" style="width: 100%;"></el-date-picker>
+                            </el-form-item>
+                        </el-col>
+                    </el-form-item>
+                    <el-form-item label="借款利率" prop="interests">
+                        <el-input v-model="ruleForm.interests"  type="number" min="0" step="0.001"></el-input>
+                    </el-form-item>
+                    <el-form-item label="贷款直接用途" prop="usage">
+                        <el-input type="textarea" v-model="ruleForm.usage"></el-input>
+                    </el-form-item>
+                    <el-form-item label="担保价格" prop="guaranteeprice">
+                        <el-input v-model="ruleForm.guaranteeprice"  type="number" min="0"></el-input>
+                    </el-form-item>
+                    <el-form-item label="贷款直接用途" prop="usage">
+                        <el-input type="textarea" v-model="ruleForm.usage"></el-input>
+                    </el-form-item>
+                    <el-form-item label="反担保措施" prop="antiguarantee">
+                        <el-input type="textarea" v-model="ruleForm.antiguarantee"></el-input>
+                    </el-form-item>
+                    <el-form-item label="还款计划" prop="plan">
+                        <el-input type="textarea" v-model="ruleForm.plan"></el-input>
+                    </el-form-item>
 
-            <el-form-item>
-                <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
-                <el-button @click="resetForm('ruleForm')">重置</el-button>
-            </el-form-item>
-        </el-form>
+                    <el-form-item>
+                        <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
+                        <el-button @click="resetForm('ruleForm')">重置</el-button>
+                    </el-form-item>
+                </el-form>
             </el-col>
 
         </el-row>
@@ -72,7 +72,7 @@
     import Header from "./Header";
     import Footer from "./Footer";
     export default {
-        name: "ApplyGuarantee",
+        name: "ApplyLoan",
         components:{
             Header,
             Footer,

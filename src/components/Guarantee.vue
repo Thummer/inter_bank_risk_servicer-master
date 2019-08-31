@@ -20,7 +20,8 @@
                     <el-table
                             ref="filterTable"
                             :data="tableData.filter(data => !search || data.price.toLowerCase().includes(search.toLowerCase()))"
-                            style="width: 100%">
+                            style="width: 100%"
+                            >
 
                         <el-table-column
                                 prop="name"
@@ -73,7 +74,7 @@
                     <el-button @click="jumpApply" style="margin: 30px">我要申请</el-button>
                 </el-col>
                 <el-col :span="12">
-                    <h1>借款者</h1>
+                    <h1>担保人</h1>
                     <el-button @click="clearFilter">清除所有过滤器</el-button>
                     <el-input
                             v-model="search1"

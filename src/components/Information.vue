@@ -10,7 +10,6 @@
         <h1>信息陈列</h1>
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="全部信息" name="first">全部信息</el-tab-pane>
-            <el-tab-pane label="欠优信息" name="second">欠优信息</el-tab-pane>
             <el-tab-pane label="我的关注" name="third">我的关注</el-tab-pane>
         </el-tabs>
         <div>
@@ -48,6 +47,7 @@
 <script>
     import Header from "./Header";
     import Footer from "./Footer";
+    import * as axios from "axios";
     export default {
         name: "Information",
         components:{
@@ -81,6 +81,11 @@
                 search: ''
             }
         },
+        mounted() {
+            this.axios.post("").then(result =>{
+                this.tableData = result.data;
+            })
+        }
     }
 </script>
 

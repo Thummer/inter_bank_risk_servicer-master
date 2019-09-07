@@ -16,6 +16,9 @@
             <h1>账号:{{ form.name }}</h1>
             <h1>密码:{{ form.pass }}</h1>
 
+            <el-button type="primary" @click="register">个人用户注册</el-button>
+            <el-button type="primary" @click="instregister">机构用户注册</el-button>
+
         </div>
 
         <h1>{{ data }}</h1>
@@ -45,14 +48,37 @@
         },
         methods: {
             onSubmit() {
-                // console.log('submit!');
-                this.axios.post("URL", {userName: this.name, password: this.pass})
+                 console.log('submit!');
+                this.axios.post("URL", {userName: this.name, password: this.pass}).then(
+                    data => {
+                        if (data.data.status != 200) {
+                            alert("登陆失败")
+                        } else {
+                            //设置Vuex登录标志为true，默认userLogin为false
+                            this.$store.dispatch("userLogin", true);
+                            //Vuex在用户刷新的时候userLogin会回到默认值false，所以我们需要用到HTML5储存
+                            //我们设置一个名为Flag，值为isLogin的字段，作用是如果Flag有值且为isLogin的时候，证明用户已经登录了。
+                            localStorage.setItem("Flag", "isLogin");
+                            alert("登录成功");
+                            //登录成功后跳转到指定页面
+                            this.$router.push("/home");
+                        }
+                    }
+                )
             },
             fetch(){
                 this.axios.get("https://api.coindesk.com/v1/bpi/currentprice.json").then(response =>{
                     this.data= response;
                 });
-            }
+            },
+            register(){
+                this.$router.push({path: '/register'})
+            },
+            instregister(){
+                this.$router.push({path: '/instregister'})
+            },
+
+
 
         },
     }

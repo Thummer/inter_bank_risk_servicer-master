@@ -13,18 +13,12 @@
             <el-col :span="12">
                 <img src="../assets/macro.jpg" alt="" style="height: 400px; width: 400px;">
                 <router-link to="/query/macro" tag="h2">宏观数据</router-link>
-                <ul>
-                    <li>解释或条目</li>
-                    <li>解释或条目</li>
-                </ul>
+
             </el-col>
             <el-col :span="12">
                 <img src="../assets/bank.jpg" alt="" style="height: 400px; width: 400px;">
                 <router-link to="/query/bank" tag="h2">银行数据</router-link>
-                <ul>
-                    <li>解释或条目</li>
-                    <li>解释或条目</li>
-                </ul>
+
             </el-col>
         </el-row>
 

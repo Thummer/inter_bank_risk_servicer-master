@@ -1,6 +1,11 @@
 <template>
 <div>
     <Header></Header>
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/services' }">金融服务</el-breadcrumb-item>
+        <el-breadcrumb-item>银团信贷服务</el-breadcrumb-item>
+    </el-breadcrumb>
     <h1>银团信贷服务</h1>
     <el-row>
         <el-col :span="12" >
@@ -245,10 +250,10 @@
                 return row[property] === value;
             },
             jumpApply(){
-                this.$router.push({path: '/applyguarantee'})
+                this.$router.push({path: '/services/loan/apploan'})
             },
             jumpApply1(){
-                this.$router.push({path: '/applyguarantee1'})
+                this.$router.push({path: '/services/loan/appbankgroup'})
             },
 
         }

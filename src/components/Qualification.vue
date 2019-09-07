@@ -82,6 +82,9 @@
                 address: [
                     {required: true, message: '请输入地址', trigger: 'blur'}
                 ],
+                file: [
+                    {required: true, trigger: 'blur'}
+                ],
 
             }
         };

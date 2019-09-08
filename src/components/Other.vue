@@ -133,7 +133,7 @@
                         prop="deal"
                         label="交易"
                         width="100">
-                    <el-button @click="">交易</el-button>
+                    <el-button @click="$router.push({path: '/services/other/deal1'})">交易</el-button>
                 </el-table-column>
             </el-table>
             <p>CRMA(信用用⻛风险缓释合约)买方报价列列表</p>
@@ -190,7 +190,7 @@
                 </el-table-column>
                 <el-table-column
                         prop="name"
-                        label="名称"
+                        label="买入方 "
                         width="120">
                 </el-table-column>
                 <el-table-column
@@ -254,7 +254,7 @@
                         prop="deal"
                         label="交易"
                         width="100">
-                    <el-button @click="">交易</el-button>
+                    <el-button @click="$router.push({path: '/services/other/deal1'})">交易</el-button>
                 </el-table-column>
             </el-table>
             <p>CDS(信用用违约互换合约)买方报价市场</p>
@@ -264,7 +264,7 @@
 
 
         <el-col :span="12">
-            <h1>担保人</h1>
+            <h1>卖方栏目</h1>
             <el-button @click="clearFilter">清除所有过滤器</el-button>
             <el-input
                     v-model="search1"
@@ -323,7 +323,7 @@
                 </el-table-column>
                 <el-table-column
                         prop="name"
-                        label="名称"
+                        label="卖出方"
                         width="120">
                 </el-table-column>
                 <el-table-column
@@ -386,7 +386,7 @@
                         prop="deal"
                         label="交易"
                         width="100">
-                    <el-button @click="">交易</el-button>
+                    <el-button @click="$router.push({path: '/services/other/deal2'})">交易</el-button>
                 </el-table-column>
             </el-table>
             <p>CRMA(信用用⻛风险缓释合约)卖方报价列列表</p>
@@ -447,7 +447,7 @@
 
                 <el-table-column
                         prop="name"
-                        label="名称"
+                        label="卖出方"
                         width="120">
                 </el-table-column>
                 <el-table-column
@@ -509,7 +509,7 @@
                         prop="deal"
                         label="交易"
                         width="100">
-                    <el-button @click="">交易</el-button>
+                    <el-button @click="$router.push({path: '/services/other/deal2'})">交易</el-button>
                 </el-table-column>
             </el-table>
             <p>CDS(信用用违约互换合约)卖方报价市场</p>

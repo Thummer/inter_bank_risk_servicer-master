@@ -1,6 +1,13 @@
 <template>
     <div>
-        <div>
+        <Header></Header>
+        <el-row>
+            <el-col :span="6"><el-breadcrumb separator-class="el-icon-arrow-right">
+                <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                <el-breadcrumb-item>登录</el-breadcrumb-item>
+            </el-breadcrumb></el-col>
+<el-col :span="10">
+    <h1>请登录</h1>
             <el-form ref="form" :model="form" label-width="80px">
                 <el-form-item label="用户名">
                     <el-input v-model="form.name"></el-input>
@@ -13,16 +20,14 @@
                     <el-button>取消</el-button>
                 </el-form-item>
             </el-form>
-            <h1>账号:{{ form.name }}</h1>
-            <h1>密码:{{ form.pass }}</h1>
-
+    <br><br>
+            <p>还没有账号?</p>
             <el-button type="primary" @click="register">个人用户注册</el-button>
             <el-button type="primary" @click="instregister">机构用户注册</el-button>
+</el-col>
+        </el-row>
 
-        </div>
-
-        <h1>{{ data }}</h1>
-        <el-button type="primary" @click="fetch">获取数据</el-button>
+        <Footer></Footer>
     </div>
 </template>
 
@@ -66,16 +71,15 @@
                     }
                 )
             },
-            fetch(){
-                this.axios.get("https://api.coindesk.com/v1/bpi/currentprice.json").then(response =>{
-                    this.data= response;
-                });
-            },
+
             register(){
                 this.$router.push({path: '/register'})
             },
             instregister(){
                 this.$router.push({path: '/instregister'})
+
+
+
             },
 
 

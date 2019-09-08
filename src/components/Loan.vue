@@ -71,7 +71,7 @@
                         prop="deal"
                         label="交易"
                         width="100">
-                    <el-button @click="">交易</el-button>
+                    <el-button @click="$router.push({path: '/services/loan/deal1'})">交易</el-button>
                 </el-table-column>
             </el-table>
 
@@ -139,7 +139,7 @@
                         prop="deal"
                         label="交易"
                         width="100">
-                    <el-button @click="">交易</el-button>
+                    <el-button @click="$router.push({path: '/services/loan/deal2'})">交易</el-button>
                 </el-table-column>
             </el-table>
 

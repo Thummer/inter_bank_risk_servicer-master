@@ -36,6 +36,20 @@ import ApplyBankGroup from "./components/ApplyBankGroup";
 import Applytenable from "./components/Applytenable";
 import InstRegister from "./components/InstRegister";
 import InformOther from "./components/InformOther";
+import Dealing from "./components/Dealing";
+import GDealing from "./components/GDealing";
+import Guarantee1Deal from "./components/Guarantee1Deal";
+import Guarantee2Deal from "./components/Guarantee2Deal";
+import O1Dealing from "./components/O1Dealing";
+import O2Dealing from "./components/O2Dealing";
+import OfflineCommunication from "./components/OfflineCommunication";
+import OnlineCommunication from "./components/OnlineCommunication";
+import Other1Deal from "./components/Other1Deal";
+import Other2Deal from "./components/Other2Deal";
+import B1Dealing from "./components/B1Dealing";
+import B2Dealing from "./components/B2Dealing";
+import Bank1Deal from "./components/Bank1Deal";
+import Bank2Deal from "./components/Bank2Deal";
 
 Vue.use(Element, { size: 'small', zIndex: 3000 });
 Vue.use(ElementUI);
@@ -124,6 +138,42 @@ const router  = new VueRouter({
               isLogin: false
           }},
       {path:'/services/loan/appbankgroup/confirm', component:InformOther, meta:{
+              isLogin: false
+          }},
+      {path:'/dealing', component:Dealing, meta:{
+              isLogin: false
+          }},
+      {path:'/gdealing', component:GDealing, meta:{
+              isLogin: false
+          }},
+      {path:'/services/guarantee/deal1', component:Guarantee1Deal, meta:{
+              isLogin: false
+          }},
+      {path:'/services/guarantee/deal2', component:Guarantee2Deal, meta:{
+              isLogin: false
+          }},
+      {path:'/services/other/deal1', component:Other1Deal, meta:{
+              isLogin: false
+          }},
+      {path:'/services/other/deal2', component:Other2Deal, meta:{
+              isLogin: false
+          }},
+      {path:'/o1dealing', component:O1Dealing, meta:{
+              isLogin: false
+          }},
+      {path:'/o2dealing', component:O2Dealing, meta:{
+              isLogin: false
+          }},
+      {path:'/services/loan/deal1', component:Bank1Deal, meta:{
+              isLogin: false
+          }},
+      {path:'/services/loan/deal2', component:Bank2Deal, meta:{
+              isLogin: false
+          }},
+      {path:'/b1dealing', component:B1Dealing, meta:{
+              isLogin: false
+          }},
+      {path:'/b2dealing', component:B2Dealing, meta:{
               isLogin: false
           }},
   ],

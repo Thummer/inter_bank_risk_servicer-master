@@ -35,7 +35,7 @@
 
             <el-col :span="12">
                 <h1>银行查询</h1>
-                <el-cascader-panel :options="options"></el-cascader-panel>
+                <el-cascader-panel :options="options" @change="getCheckedNodes"></el-cascader-panel>
             </el-col>
         </el-row>
 
@@ -83,8 +83,8 @@
                 },
                 ],
                 options: [{
-                    value: 'zhinan',
-                    label: '广东',
+                    value: 'hebei',
+                    label: '河北省',
                     children: [{
                         value: 'shejiyuanze',
                         label: '设计原则',
@@ -280,6 +280,11 @@
 
             }
         },
+        methods:{
+            getCheckedNodes(val){
+                console.log(val)
+            }
+        }
     }
 </script>
 

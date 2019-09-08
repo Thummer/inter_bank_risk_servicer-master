@@ -67,7 +67,7 @@
                                 prop="deal"
                                 label="交易"
                                 width="100">
-                            <el-button @click="">交易</el-button>
+                            <el-button @click="deal1">交易</el-button>
                         </el-table-column>
                     </el-table>
 
@@ -130,7 +130,7 @@
                                 prop="deal"
                                 label="交易"
                                 width="100">
-                            <el-button @click="">交易</el-button>
+                            <el-button @click="deal2">交易</el-button>
                         </el-table-column>
                     </el-table>
 
@@ -235,6 +235,12 @@
             jumpApply1(){
                 this.$router.push({path: '/applyguarantee1'})
             },
+            deal1(){
+                this.$router.push({path: '/services/guarantee/deal2'})
+            },
+            deal2(){
+                this.$router.push({path: '/services/guarantee/deal1'})
+            }
 
         }
     }

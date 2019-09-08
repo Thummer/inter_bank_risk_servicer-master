@@ -1,0 +1,9 @@
+[{
+	"date": "2015-02-04",
+	"name": "sample1",
+	"information": "sample description 1"
+}, {
+	"date": "2016-05-04",
+	"name": "sample2",
+	"information": "sample description 2"
+}]

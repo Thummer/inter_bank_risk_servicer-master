@@ -56,34 +56,18 @@
         },
         data() {
             return {
-                items:[
-                    'Some information', 'Other information', 'More information'
-                ],
                 activeName:'first',
 
-                tableData: [{
-                    date: '2015-02-04',
-                    name: 'sample1',
-                    information: 'sample description 1'
-                }, {
-                    date: '2016-05-04',
-                    name: 'sample2',
-                    information:'sample description 2'
-                }, {
-                    date: '2017-03-01',
-                    name: 'sample3',
-                    information:'sample description 3'
-                }, {
-                    date: '2019-04-21',
-                    name: 'sample4',
-                    information:'sample description 4'
-                }],
+                tableData: [],
                 search: ''
             }
         },
         mounted() {
-            this.axios.post("").then(result =>{
+            this.axios.get('data.json').then(result =>{
                 this.tableData = result.data;
+                console.log(result.data);
+            }).catch((error) => {
+                console.log(error)
             })
         }
     }

@@ -45,15 +45,6 @@
                         </el-table-column>
                     </el-table>
                 </div>
-                <el-row>
-                    <el-col :span="12">
-                        <el-button type="warning">最新SHIBOR报价</el-button>
-                    </el-col>
-
-                    <el-col :span="12">
-                        <el-button type="warning">最近SHIBOR报价</el-button>
-                    </el-col>
-                </el-row>
             </el-col>
 
             <el-col :span="12">

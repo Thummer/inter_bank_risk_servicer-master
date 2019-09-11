@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+<!--    TODO 这里为整个页面的根路由, 所有页面都是在这里通过vue-router进行路由模拟, 在进行页面跳转时不需要对页面进行刷新.-->
 <!--    <Header></Header>-->
 <!--&lt;!&ndash;    <img alt="Vue logo" src="./assets/logo.png">&ndash;&gt;-->
 <!--&lt;!&ndash;    <HelloWorld msg="Welcome to Your Vue.js App"/>&ndash;&gt;-->

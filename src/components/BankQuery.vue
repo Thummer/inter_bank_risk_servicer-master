@@ -56,7 +56,7 @@
         },
         data() {
             return {
-                tableData:[{
+                tableData:[{        //TODO 表格数据已经过测试, 可以直接从后台获取Json数据, 注意获取到的数据与表格中数据命名不同的问题.
                     data:'Cost to income ratio',
                     gongshang:'2.5600',
                     nongye:'2.5600'
@@ -82,7 +82,7 @@
                     nongye:'2.5600'
                 },
                 ],
-                options: [{
+                options: [{     //TODO 这里尚未完成, 思路为列表数据通过axios动态地从后台获取
                     value: 'hebei',
                     label: '河北省',
                     children: [{
@@ -280,7 +280,7 @@
 
             }
         },
-        methods:{
+        methods:{//TODO 这里可以获取选中的标签, 可以在这里写选中某个银行之后进行数据查询并重新渲染表格.
             getCheckedNodes(val){
                 console.log(val)
             }

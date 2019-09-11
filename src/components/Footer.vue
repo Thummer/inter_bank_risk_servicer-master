@@ -6,7 +6,7 @@
     </el-row>
 
 </template>
-
+<!--TODO 编辑页脚. 已经注册的组件, 可通过<Footer></Footer>直接引用-->
 <script>
     export default {
         name: "Footer"

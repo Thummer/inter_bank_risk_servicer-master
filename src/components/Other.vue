@@ -536,7 +536,7 @@
         return{
             search:'',
             search1: '',
-            tableData: [{
+            tableData: [{   //TODO 请注意这里共有四个表格, 但是数据作为测试仅仅有tableData 和tableData1 ,应将其进行替换并且数据应从后端动态获取
                 name: '大连银行',
                 ratio: 123,
                 amount: '100',

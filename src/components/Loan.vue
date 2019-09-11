@@ -67,6 +67,7 @@
                                 disable-transitions>{{scope.row.tag}}</el-tag>
                     </template>
                 </el-table-column>
+<!--                TODO 涉及到标签筛选 详细请参考elementUI文档-->
                 <el-table-column
                         prop="deal"
                         label="交易"
@@ -174,7 +175,7 @@
             return{
                 search:'',
                 search1: '',
-                tableData: [{
+                tableData: [{       //TODO tableData 请设置为从后台动态获取
                     name: '大连银行',
                     level: 'AAA',
                     amount: '100',

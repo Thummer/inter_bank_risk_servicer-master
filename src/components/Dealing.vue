@@ -33,14 +33,17 @@
                     </el-form-item>
                 </el-form>
                 <p>本表单不支持在线填写,请<a href="/screenshots.zip">下载文件</a>之后填写.</p>
+<!--                TODO 由于无法通过填写内容动态生成较高质量的表单. href="/screenshots.zip"请替换为相应的表单, 推荐doc, docx 格式, 较为美观-->
                 <p v-if="!upstate">请等待对方单位填写表单</p>
                 <p v-if="upstate">对方单位已经完成表单填写, 请上传表单</p>
             </el-col>
 
             <el-button @click="confirm2" type="primary" :disabled="state">我已填写完毕</el-button>
+<!--            TODO 填写完毕后, 通过confirm函数将state值设置为true 同时应向服务器提交对应的修改, 表示本方已经完成填写, 对方能否提交文件取决于本方的状态.-->
             <el-button @click="confirm1" :disabled="!upstate" v-loading="!upstate">拍照上传</el-button>
-
+<!--TODO 能否上传的状态取决于对方是否点击"我已填写完毕"-->
             <el-button @click="confirm3">rrr</el-button>
+<!--            TODO 测试按钮, 手动将对方的状态设置为已经点击"我已填写完毕", 部署项目时请删除.-->
         </el-row>
 
         <div>
@@ -52,11 +55,12 @@
                 <el-upload
                         class="upload-demo"
                         ref="upload"
-                        action="https://jsonplaceholder.typicode.com/posts/"
+                       action="这里填写上传服务器"
                         :on-preview="handlePreview"
                         :on-remove="handleRemove"
                         :file-list="fileList"
                         :auto-upload="false">
+                    <!-- TODO 这里处理文件上传, action选项为上传到的服务器-->
                     <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
                     <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
                     <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
@@ -131,7 +135,7 @@
                 })
             }
         },
-        mounted() {
+        mounted() { //TODO 这里通过动态获取后台设置的某一项数据, 来获取所选择的对方机构是否已经点击"我已填写完毕", 5000为延时参数, 数值为5秒
             // while (1){
             //     setTimeout(this.axios.get('data').then(result =>{
             //         this.upstate = result.data;

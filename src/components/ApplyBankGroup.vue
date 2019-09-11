@@ -102,7 +102,7 @@
         data() {
             return {
                 dialogVisible:'true',
-                ruleForm: {
+                ruleForm: {     //TODO 此处为表单数据, 动态对应HTML代码中表单prop值, 其他表单同理
                     bankID: '',
                     lineOfCredit: '',
                     OptionalLoanTerm: '',
@@ -113,7 +113,7 @@
                     fundDemand:'',
                     cashflowAnalysis:'',
                 },
-                rules: {
+                rules: {    //TODO 表单合法性检测
                     bankID: [
                         {required: true, message: '请输入机构名称', trigger: 'blur'},
                     ],
@@ -145,15 +145,15 @@
             };
         },
         methods: {
-            submitForm(formName) {
+            submitForm(formName) {  //TODO 表单提交时调用的函数, 对应 81行 @click="submitForm('ruleForm')" 其他表格同理
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        axios({
+                        axios({ //TODO 项目使用axios发起HTML请求 获取数据或提交数据
                             url:'',
                             method:'POST',
                             data:'ruleForm'
                         });
-                        this.$router.push({path: '/services/loan/appbankgroup/confirm'})
+                        this.$router.push({path: '/services/loan/appbankgroup/confirm'}) //TODO 项目使用vue-router路由, 这里表示页面跳转, 路由设置参main.js
                     } else {
                         console.log('error submit!!');
                         return false;

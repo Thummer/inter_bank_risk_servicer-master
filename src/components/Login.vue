@@ -56,6 +56,7 @@
                  console.log('submit!');
                 this.axios.post("URL", {userName: this.name, password: this.pass}).then(
                     data => {
+                        //TODO 涉及部分页面需要确认登录状态, 否则跳转至登录页面
                         if (data.data.status != 200) {
                             alert("登陆失败")
                         } else {

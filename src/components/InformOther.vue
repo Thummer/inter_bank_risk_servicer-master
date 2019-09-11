@@ -10,7 +10,7 @@
         <el-row>
             <h1>在点击下一步前,请先通知其他单位</h1>
             <el-button type="primary" @click="click">下一步</el-button>
-
+<!--TODO 尚未完成确认对方相应后才可进行下一步操作. 思路可参考交易中上传文件部分-->
         </el-row>
         <Footer></Footer>
     </div>

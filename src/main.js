@@ -9,7 +9,7 @@ import VueAxios from "vue-axios";
 import HighchartsVue from 'highcharts-vue'
 import Vuex from 'vuex'
 
-//引入路由页面
+//TODO 引入路由页面 前一部分为components名, 后一部分为文件相对位置
 import Services from "./components/Services";
 import Home from "./components/Home";
 import Query from "./components/Query";
@@ -59,7 +59,7 @@ Vue.use(HighchartsVue);
 Vue.use(Vuex);
 Vue.config.productionTip = false
 
-//配置路由
+//TODO 配置路由 目前处于开发状态. 在项目部署前请将需要登陆的页面meta值设置为true
 const router  = new VueRouter({
   routes:[
     {path:"/", component:Home, meta:{
@@ -181,7 +181,7 @@ const router  = new VueRouter({
 
 })
 
-
+//TODO 登录状态管理
 export const store = new Vuex.Store({
   // 设置属性
   state: {

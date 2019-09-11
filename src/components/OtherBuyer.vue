@@ -99,7 +99,7 @@
         },
     data() {
         return {
-            ruleForm: {
+            ruleForm: {     //TODO 表格中涉及的数据, 动态输入同步
                 type: [],
                 type1: '',
                 name: '',
@@ -147,7 +147,7 @@
         submitForm(formName) {
             this.$refs[formName].validate((valid) => {
                 if (valid) {
-                    alert('submit!');
+                    alert('submit!');       //TODO 经过前端表单验证之后会进行提交, 请修改为通过axios提交至后端的代码
                 } else {
                     console.log('error submit!!');
                     return false;

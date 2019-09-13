@@ -18,22 +18,7 @@
                             :value="item.value">
                     </el-option>
                 </el-select>
-                <el-form label-width="100px" style="padding: 10px" >
-                    <el-form-item label="担保人单位">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="交易人代表">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="公司地址">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="同意申请担保文件或董事会批准文件">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                </el-form>
-                <p>本表单不支持在线填写,请<a href="/screenshots.zip">下载文件</a>之后填写.</p>
-<!--                TODO 由于无法通过填写内容动态生成较高质量的表单. href="/screenshots.zip"请替换为相应的表单, 推荐doc, docx 格式, 较为美观-->
+
                 <p v-if="!upstate">请等待对方单位填写表单</p>
                 <p v-if="upstate">对方单位已经完成表单填写, 请上传表单</p>
             </el-col>

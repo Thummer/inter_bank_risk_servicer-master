@@ -42,17 +42,20 @@
         <el-row>
             <el-col style="margin: 50px 250px" :span="16">
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" style="padding: 10px">
-            <el-form-item label="申请单位" prop="name">
-                <el-input v-model="ruleForm.name"></el-input>
+            <el-form-item label="银行名称" prop="bankID">
+                <el-input v-model="ruleForm.bankID"></el-input>
+            </el-form-item>
+            <el-form-item label="申请单位" prop="applycom">
+                <el-input v-model="ruleForm.applycom"></el-input>
             </el-form-item>
             <el-form-item label="交易人代表" prop="deputy">
                 <el-input v-model="ruleForm.deputy"></el-input>
             </el-form-item>
-            <el-form-item label="公司地址" prop="address">
-                <el-input v-model="ruleForm.address"></el-input>
+            <el-form-item label="公司地址" prop="comaddress">
+                <el-input v-model="ruleForm.comaddress"></el-input>
             </el-form-item>
-            <el-form-item label="借款额度" prop="amount">
-                <el-input v-model="ruleForm.amount" type="number"></el-input>
+            <el-form-item label="借款额度" prop="borrowlimit">
+                <el-input v-model="ruleForm.borrowlimit" type="number"></el-input>
             </el-form-item>
             <el-form-item label="借款期限" required>
                 <el-col :span="11" >
@@ -67,23 +70,20 @@
                     </el-form-item>
                 </el-col>
             </el-form-item>
-            <el-form-item label="借款利率" prop="interests">
-                <el-input v-model="ruleForm.interests"  type="number" min="0" step="0.001"></el-input>
+            <el-form-item label="借款利率" prop="lendrate">
+                <el-input v-model="ruleForm.lendrate"  type="number" min="0" step="0.001"></el-input>
             </el-form-item>
-            <el-form-item label="贷款直接用途" prop="usage">
-                <el-input type="textarea" v-model="ruleForm.usage"></el-input>
+            <el-form-item label="贷款直接用途" prop="useloan">
+                <el-input type="textarea" v-model="ruleForm.useloan"></el-input>
             </el-form-item>
-            <el-form-item label="担保价格" prop="guaranteeprice">
-                <el-input v-model="ruleForm.guaranteeprice"  type="number" min="0"></el-input>
+            <el-form-item label="担保价格" prop="guarprice">
+                <el-input v-model="ruleForm.guarprice"  type="number" min="0"></el-input>
             </el-form-item>
-            <el-form-item label="贷款直接用途" prop="usage">
-                <el-input type="textarea" v-model="ruleForm.usage"></el-input>
+            <el-form-item label="反担保措施" prop="counguarmea">
+                <el-input type="textarea" v-model="ruleForm.counguarmea"></el-input>
             </el-form-item>
-            <el-form-item label="反担保措施" prop="antiguarantee">
-                <el-input type="textarea" v-model="ruleForm.antiguarantee"></el-input>
-            </el-form-item>
-            <el-form-item label="还款计划" prop="plan">
-            <el-input type="textarea" v-model="ruleForm.plan"></el-input>
+            <el-form-item label="还款计划" prop="repaysche">
+            <el-input type="textarea" v-model="ruleForm.repaysche"></el-input>
             </el-form-item>
 
             <el-form-item>
@@ -111,46 +111,51 @@
             return {
                 dialogVisible:true,
                 ruleForm: {
-                    name: '',
+                    bankID,
+                    applycom: '',
                     deputy: '',
-                    address: '',
-                    amount: '',
-                    date1:'',
+                    comaddress: '',
+                    borrowlimit: '',
+                    date1:'',       //TODO 不清楚date类型格式, 如需替换 请替换
                     date2:'',
-                    interests:'',
-                    usage:'',
-                    guaranteeprice:'',
-                    antiguarantee:'',
-                    plan:'',
+                    lendrate:'',
+                    useloan:'',
+                    guarprice:'',
+                    counguarmea:'',
+                    repaysche:'',
 
                 },
                 rules: {
-                    name: [
+                    bankID: [
+                        {required: true, message: '请输入活动名称', trigger: 'blur'},
+                        {min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur'}
+                    ],
+                    applycom: [
                         {required: true, message: '请输入活动名称', trigger: 'blur'},
                         {min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur'}
                     ],
                     deputy: [
                         {required: true, message: '请输入交易人代表', trigger: 'blur'}
                     ],
-                    address: [
+                    comaddress: [
                         {required: true, message: '请输入地址', trigger: 'blur'}
                     ],
-                    amount: [
+                    borrowlimit: [
                         {required: true, message: '请输入借款额度', trigger: 'blur'}
                     ],
-                    interests: [
+                    lendrate: [
                         {required: true, message: '请输入借款利率', trigger: 'blur'}
                     ],
-                    usage: [
+                    useloan: [
                         {required: true, message: '请输入贷款直接用途', trigger: 'blur'}
                     ],
-                    guaranteeprice: [
+                    guarprice: [
                         {required: true, message: '请输入担保价格', trigger: 'blur'}
                     ],
-                    antiguarantee: [
+                    counguarmea: [
                         {required: true, message: '请输入反担保措施', trigger: 'blur'}
                     ],
-                    plan: [
+                    repaysche: [
                         {required: true, message: '请输入还款计划', trigger: 'blur'}
                     ],
                 }

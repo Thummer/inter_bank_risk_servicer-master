@@ -16,43 +16,7 @@
                             :value="item.value">
                     </el-option>
                 </el-select>
-                <el-form label-width="100px" style="padding: 10px">
-                    <el-form-item label="买入方">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="费率">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="名义本金总额">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="标的实体">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="标的债务">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="信用保护期限">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="起始日">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="到期日">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="支付频率">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="首次支付日">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="保付比例">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                </el-form>
 
-                <p>本表单不支持在线填写,请<a href="/screenshots.zip">下载文件</a>之后填写.</p>
                 <p v-if="!upstate">请等待对方单位填写表单</p>
                 <p v-if="upstate">对方单位已经完成表单填写, 请上传表单</p>
             </el-col>

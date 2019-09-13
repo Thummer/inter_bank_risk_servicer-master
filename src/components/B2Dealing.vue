@@ -8,6 +8,7 @@
         </el-breadcrumb>
         <el-row>
             <el-col style="margin: 50px 250px" :span="16">
+<!--                TODO 从后台获取可选列表 用法参elementUI-->
                 <el-select v-model="value" placeholder="请选择要交易的银行">
                     <el-option
                             v-for="item in options"
@@ -16,40 +17,6 @@
                             :value="item.value">
                     </el-option>
                 </el-select>
-                <el-form label-width="100px" style="padding: 10px">
-                    <el-form-item label="项目名称">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="性质">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="借款用途">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="借款金额">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="借款币种">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="提款期">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="宽限期">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="还款期">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="利率水平">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="提供的担保">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                </el-form>
-
-                <p>本表单不支持在线填写,请<a href="/screenshots.zip">下载文件</a>之后填写.</p>
                 <p v-if="!upstate">请等待对方单位填写表单</p>
                 <p v-if="upstate">对方单位已经完成表单填写, 请上传表单</p>
             </el-col>

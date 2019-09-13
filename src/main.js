@@ -59,7 +59,7 @@ Vue.use(HighchartsVue);
 Vue.use(Vuex);
 Vue.config.productionTip = false
 
-//TODO 配置路由 目前处于开发状态. 在项目部署前请将需要登陆的页面meta值设置为true
+//TODO 配置路由 目前处于开发状态. 在项目部署前请将需要登陆的页面meta值设置为true 可作参考为不同路由对应的组件
 const router  = new VueRouter({
   routes:[
     {path:"/", component:Home, meta:{

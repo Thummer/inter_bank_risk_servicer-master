@@ -22,11 +22,11 @@
                 </el-table-column>
                 <el-table-column
                         label="名称"
-                        prop="name">
+                        prop="bankID">
                 </el-table-column>
                 <el-table-column
                         label="信息概述"
-                        prop="information">
+                        prop="news">
                 </el-table-column>
                 <el-table-column
                         align="right">

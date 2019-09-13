@@ -16,31 +16,7 @@
                             :value="item.value">
                     </el-option>
                 </el-select>
-                <el-form label-width="100px" style="padding: 10px">
-                    <el-form-item label="提供贷款额度">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="可选贷款期限">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="项目的投资环境">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="技术问题">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="市场前景">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="资金需求">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                    <el-form-item label="现金流量分析">
-                        <el-input :disabled="true"></el-input>
-                    </el-form-item>
-                </el-form>
 
-                <p>本表单不支持在线填写,请<a href="/screenshots.zip">下载文件</a>之后填写.</p>
                 <p v-if="!upstate">请等待对方单位填写表单</p>
                 <p v-if="upstate">对方单位已经完成表单填写, 请上传表单</p>
             </el-col>

@@ -131,7 +131,7 @@
                             method:'POST',
                             data:'ruleForm'
                         });
-                        this.$router.push({path: '/applyguarantee1'})
+                        this.$router.push({path: '/'})
                     } else {
                         console.log('error submit!!');
                         return false;
